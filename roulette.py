@@ -6,15 +6,17 @@ from PIL import Image
 import time
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
-time_icon = {'left' : -1200, 'top' : 530, 'width' : 500 ,'height' : 50}
-insert_icon = {'left' : -565, 'top' : 163, 'width' : 30 ,'height' : 20}
+time_icon = {'left' : 855, 'top' : 540, 'width' : 230 ,'height' : 30}
+insert_icon = {'left' : 1338, 'top' : 180, 'width' : 30 ,'height' : 20}
 
-low_button = [-2080 , 1080]
-even_button = [-1880 , 1080]
-red_button = [-1680 , 1080]
-black_button = [-1480 , 1080]
-odd_button = [-1280 , 1080]
-high_button = [-1080 , 1080]
+min=2
+hig=8
+low_button = [299 , 855]
+even_button = [444 , 855]
+red_button = [602 , 855]
+black_button = [764 , 855]
+odd_button = [919 , 855]
+high_button = [1071 , 855]
 red = []
 red [0:10] =[0,1,0,1,0,1,0,1,0,1,0]
 red [11:20] = [0,1,0,1,0,1,0,1,1,0]
@@ -61,7 +63,7 @@ while True:
         color_count= color_count + 1
         even_count = even_count + 1
         high_count = high_count + 1
-        if high_count > 2  and high_count < 8:
+        if high_count >= 3  and high_count < 8:
             j = 1
             if high_check == 0 :
                 for i in range(3,high_count):
@@ -74,7 +76,7 @@ while True:
                 for i in range(0,j): 
                     click(low_button)
         
-        if color_count > 2 and color_count < 8:
+        if color_count >= 3 and color_count < 8:
             j = 1
             if color_check == 0 :
                 for i in range(3,color_count):
@@ -87,7 +89,7 @@ while True:
                 for i in range(0,j): 
                     click(black_button)
         
-        if even_count > 2 and even_count < 8:
+        if even_count >= 3 and even_count < 8:
             j = 1
             if even_check == 0 :
                 for i in range(3,even_count):
