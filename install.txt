@@ -1,0 +1,6 @@
+pyautogui(마우스 좌표)
+mss(화면 캡쳐)
+numpy(행렬 연산)
+opencv-python(이미지 처리)
+
+ValueError: invalid literal for int() with base 10: '0)\n'
